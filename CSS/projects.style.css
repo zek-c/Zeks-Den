@@ -1,12 +1,15 @@
 body {background-color: black;
 }
 .image-container {
-            position: relative;
-            display: inline-block;
-            margin: 20px;
-            transform: translateZ(0); /* enable GPU acceleration on hover */
-            transition: transform .2s;
-        }
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  transform: translateZ(0); 
+  transition: transform .2s;
+  
+  overflow: hidden;
+  border-radius: 55px; 
+}
         .image {
             display: block;
             width: 300px;
@@ -17,24 +20,25 @@ body {background-color: black;
             transition: transform .2s;
         }
         .image:hover {
-            transform: scale(1.4);
+            transform: scale(1.1);
         }
         .bottom-div {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            font-color:white;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            box-sizing: border-box;
-            margin: 0;
-            font-family: roboto; monospace;
-        }
+  position: absolute;
+  bottom: -30px; 
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: roboto;
+  
+  transform: translateY(100%);
+}
         #fullscreen-iframe {
             position: fixed;
             top: 0;
@@ -45,3 +49,6 @@ body {background-color: black;
             z-index: 1000;
             display: none;
         }
+.image-container:hover .bottom-div {
+  transform: translateY(0);
+}
