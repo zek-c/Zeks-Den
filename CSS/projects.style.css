@@ -54,3 +54,6 @@ body {background-color: black;
 .image-container:hover .bottom-div {
   transform: translateY(0);
 }
+.image-container:hover{
+transform: scale(1.1)
+}
