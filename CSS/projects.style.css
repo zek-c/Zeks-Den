@@ -25,19 +25,20 @@ body {background-color: black;
         }
         .bottom-div {
   position: absolute;
-  bottom: 30px; 
+  bottom: 35px; 
   left: 0;
   width: 100%;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  font-size: 16px;
+  font-size: 28px;
   font-weight: bold;
   text-align: center;
   box-sizing: border-box;
   margin: 0;
-  font-family: roboto;
+  font-family: roboto; monospace;
   z-index: 3;
+font-color: white;
   
   transform: translateY(100%);
 }
