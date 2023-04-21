@@ -16,7 +16,7 @@ body {background-color: black;
             cursor: pointer;
             transition: transform .2s;
         }
-        .image.expand {
+        .image:hover {
             transform: scale(1.4);
         }
         .bottom-div {
