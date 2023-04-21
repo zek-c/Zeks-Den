@@ -39,6 +39,7 @@ body {background-color: black;
   font-family: roboto; monospace;
   z-index: 3;
 font-color: white;
+transition: .2s;
   
   transform: translateY(100%);
 }
