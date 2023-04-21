@@ -12,8 +12,8 @@ body {background-color: black;
 }
         .image {
             display: block;
-            width: 315px;
-            height: 215px;
+            width: 275px;
+            height: 175px;
             object-fit: cover; /* adjust as needed */
             border-radius: 55px; /* for rounded edges */
             cursor: pointer;
