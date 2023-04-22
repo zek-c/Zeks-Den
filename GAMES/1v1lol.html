@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Super-Plant-Life</title>
+    <title>1v1.lol</title>
     <style>
       html, body {
         padding: 0;
@@ -19,8 +19,13 @@
         border: none;
       }
     </style>
+    <script>// Get the iframe element
+var iframe = document.getElementById("my-iframe");
+var iframeWindow = iframe.contentWindow || iframe.contentDocument.defaultView;
+iframeWindow.alert = function() {};
+    </script>
   </head>
   <body>
-    <iframe src="https://1v1lol.oofawesome.repl.co/"></iframe>
+    <iframe id="my-iframe" src="https://1v1lol.oofawesome.repl.co/"></iframe>
   </body>
 </html>
