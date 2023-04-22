@@ -10,9 +10,10 @@
   <a href="#" onclick="window.location.href='#option3'" style="padding: 20px 30px;">Option 3</a>
   <a href="#" onclick="window.location.href='#option4'" style="padding: 20px 30px; margin-left: 10px;">Option 4</a>
 </div>
-	  <div class="search-container">
-  <input type="text" id="search-bar" placeholder="Click here to search">
-</div>
+	 <div class="search-bar">
+		<input type="text" placeholder="Click here to search" oninput="searchGames()">
+		<img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png" alt="Search">
+	</div>
 	  <script>const searchInput = document.querySelector('.search-bar input[type="text"]');
 const images = document.querySelectorAll('.image-container');
 
