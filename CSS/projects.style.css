@@ -66,3 +66,29 @@ font-family: roboto; monospace;
       text-decoration: none;
   color: purple;
 }
+.search-container {
+  position: relative;
+  margin: 20px;
+}
+
+#game-search-bar {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #8a2be2;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+#game-search-bar:focus {
+  width: 300px;
+}
+
+#game-search-bar::placeholder {
+  color: #fff;
+}
+
