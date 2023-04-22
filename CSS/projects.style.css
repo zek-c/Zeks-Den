@@ -1,12 +1,5 @@
 body {background-color: black;
 }
-.image-grid {
-margin: 0 auto;
-max-width: 100%;
-overflow: auto; /* or overflow: hidden; */
-
-}
-}
 .image-container {
   width: 275px;
    height:175px;
