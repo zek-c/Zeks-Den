@@ -13,20 +13,23 @@
 	  <div class="search-container">
   <input type="text" id="search-bar" placeholder="Click here to search">
 </div>
-	  <script>const searchBar = document.getElementById('searchBar');
-const images = document.getElementsByClassName('image-container');
+	  <script>const searchInput = document.querySelector('.search-bar input[type="text"]');
+const images = document.querySelectorAll('.image-container');
 
-searchBar.addEventListener('keyup', function() {
-  const searchTerm = searchBar.value.toLowerCase();
-  for (let i = 0; i < images.length; i++) {
-    const gameTitle = images[i].querySelector('.bottom-div').textContent.toLowerCase();
-    if (gameTitle.includes(searchTerm)) {
-      images[i].style.display = 'inline-block';
+searchInput.addEventListener('input', () => {
+  const searchValue = searchInput.value.toLowerCase();
+
+  images.forEach((image) => {
+    const gameName = image.querySelector('.bottom-div').textContent.toLowerCase();
+    
+    if (gameName.includes(searchValue)) {
+      image.classList.remove('hidden');
     } else {
-      images[i].style.display = 'none';
+      image.classList.add('hidden');
     }
-  }
+  });
 });
+
 </script>
 </head>
 <body>
