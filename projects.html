@@ -13,31 +13,23 @@
 	  <div class="search-container">
   <input type="text" id="game-search-bar" placeholder="Click here to search">
 </div>
-	  <script>const searchInput = document.getElementById("game-search-bar");
-searchInput.addEventListener("click", function() {
-  searchInput.placeholder = "";
-  searchInput.classList.add("clicked");
-});
+	  <script>const searchBar = document.getElementById("search-bar");
+const gameList = document.getElementById("game-list");
 
-searchInput.addEventListener("blur", function() {
-  searchInput.placeholder = "Click here to search";
-  searchInput.classList.remove("clicked");
-});
-
-searchInput.addEventListener("input", searchGames);
-
-function searchGames() {
-  const searchInputValue = searchInput.value.toLowerCase();
-  const gameElements = document.querySelectorAll(".game");
-  Array.from(gameElements).forEach((gameElement) => {
-    const gameImage = gameElement.querySelector("img.target-class");
-    if (gameImage && gameImage.alt.toLowerCase().includes(searchInputValue)) {
-      gameElement.classList.remove("hidden");
+searchBar.addEventListener("keyup", function(event) {
+  const searchText = event.target.value.toLowerCase();
+  const games = gameList.getElementsByClassName("image-container");
+  for (let i = 0; i < games.length; i++) {
+    const game = games[i];
+    const bottomDiv = game.querySelector(".bottom-div");
+    if (bottomDiv.textContent.toLowerCase().indexOf(searchText) === -1) {
+      game.style.display = "none";
     } else {
-      gameElement.classList.add("hidden");
+      game.style.display = "";
     }
-  });
-}
+  }
+});
+
 </script>
 </head>
 <body>
