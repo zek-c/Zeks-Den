@@ -6,6 +6,8 @@ body {background-color: black;
   gap: 75px;
 }
 .image-container {
+  width: 275px;
+   height:175px;
   position: relative;
   display: inline-block;
   margin: 20px;
