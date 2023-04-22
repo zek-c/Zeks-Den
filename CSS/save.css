@@ -10,6 +10,7 @@ body {background-color: black;
   border-radius: 4px;
   cursor: pointer;
   item-align: center;
+  text-align: center;
 }
 
 /* Style for the import button */
@@ -21,6 +22,7 @@ body {background-color: black;
   border-radius: 4px;
   cursor: pointer;
   item-align: center;
+  text-align: center;
 }
 
 /* Hide the import input field */
