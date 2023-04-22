@@ -4,7 +4,7 @@ body {background-color: black;
   width: 275px;
    height:175px;
   position: relative;
-  display: inline-block;
+  display: flex;
   margin: 20px;
   transform: translateZ(0); 
   transition: transform .2s;
