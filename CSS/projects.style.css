@@ -1,5 +1,10 @@
 body {background-color: black;
 }
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
 .image-container {
   position: relative;
   display: inline-block;
