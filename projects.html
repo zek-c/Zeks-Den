@@ -15,6 +15,8 @@
 </div>
 
 	  <script>const searchInput = document.getElementById("game-search-bar");
+const imageContainers = document.querySelectorAll(".image-container");
+const allGames = Array.from(imageContainers);
 
 searchInput.addEventListener("click", function() {
   searchInput.placeholder = "";
@@ -30,25 +32,31 @@ searchInput.addEventListener("input", searchGames);
 
 function searchGames() {
   const searchInputValue = searchInput.value.toLowerCase();
-  const imageContainers = document.querySelectorAll(".image-container");
 
-  const matchingGames = Array.from(imageContainers).filter((imageContainer) => {
-    const imageClass = imageContainer.querySelector(".image").classList[1];
-    const bottomDivText = imageContainer.querySelector(".bottom-div").textContent.toLowerCase();
-    return imageClass.includes(searchInputValue) || bottomDivText.includes(searchInputValue);
-  });
+  if (searchInputValue) {
+    // Filter the games that match the search query
+    const matchingGames = allGames.filter((imageContainer) => {
+      const imageClass = imageContainer.querySelector(".image").classList[1];
+      const bottomDivText = imageContainer.querySelector(".bottom-div").textContent.toLowerCase();
+      return imageClass.includes(searchInputValue) || bottomDivText.includes(searchInputValue);
+    });
 
-  // Hide all image containers first
-  Array.from(imageContainers).forEach((imageContainer) => {
-    imageContainer.style.display = "none";
-  });
+    // Hide all image containers first
+    allGames.forEach((imageContainer) => {
+      imageContainer.style.display = "none";
+    });
 
-  // Display the matching games
-  matchingGames.forEach((matchingGame) => {
-    matchingGame.style.display = "block";
-  });
+    // Display the matching games
+    matchingGames.forEach((matchingGame) => {
+      matchingGame.style.display = "block";
+    });
+  } else {
+    // Reset the search
+    allGames.forEach((imageContainer) => {
+      imageContainer.style.display = "block";
+    });
+  }
 }
-
 </script>
 </head>
 <body>
