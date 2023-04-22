@@ -71,7 +71,7 @@ font-family: roboto; monospace;
   margin: 20px;
 }
 
-#game-search-bar {
+#search-bar {
   width: 200px;
   height: 40px;
   border: none;
@@ -84,11 +84,11 @@ font-family: roboto; monospace;
   transition: all 0.2s ease-in-out;
 }
 
-#game-search-bar:focus {
+#search-bar:focus {
   width: 1200px;
 }
 
-#game-search-bar::placeholder {
+#search-bar::placeholder {
   color: #fff;
 }
 .game.hidden {
