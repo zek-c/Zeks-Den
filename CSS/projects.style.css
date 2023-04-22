@@ -66,33 +66,41 @@ font-family: roboto; monospace;
       text-decoration: none;
   color: purple;
 }
-.search-container {
-  position: relative;
-  margin: 20px;
-}
-
-#search-bar {
-  width: 200px;
-  height: 40px;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #8a2be2;
-  outline: none;
-  transition: all 0.2s ease-in-out;
-}
-
-#search-bar:focus {
-  width: 1200px;
-}
-
-#search-bar::placeholder {
-  color: #fff;
-}
-.game.hidden {
-  display: none !important;
-}
-
-
+.search-bar {
+			position: relative;
+			display: inline-block;
+			height: 40px;
+			width: 300px;
+			margin: 10px;
+			background-color: purple;
+			border-radius: 20px;
+			color: white;
+			text-align: center;
+			line-height: 40px;
+			cursor: text;
+		}
+		
+		.search-bar input[type="text"] {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			border: none;
+			border-radius: 20px;
+			color: white;
+			padding: 0 20px;
+			box-sizing: border-box;
+			outline: none;
+		}
+		
+		.search-bar img {
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			transform: translateY(-50%);
+			height: 25px;
+			width: 25px;
+			cursor: pointer;
+		}
