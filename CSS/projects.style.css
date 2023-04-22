@@ -30,7 +30,7 @@ body {background-color: black;
   item-align:center;
   bottom: -10px; 
   left: 0;
-  width: 302.5px;
+  width: 100%;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
