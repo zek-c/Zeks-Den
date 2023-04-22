@@ -38,12 +38,6 @@
 	<script>
 		window.onload = function() {
 			var savedTheme = localStorage.getItem('theme');
-			if (savedTheme) {
-				document.body.style.backgroundColor = savedTheme;
-				var links = document.getElementsByTagName('a');
-				for (var i = 0; i < links.length; i++) {
-					links[i].style.color = savedTheme;
-				}
 				var locbar = document.getElementsByClassName('locbar')[0];
 				if (locbar) {
 					locbar.style.backgroundColor = savedTheme;
