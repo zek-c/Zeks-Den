@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IndexedDB Example</title>
+</head>
+<body>
+
+  <button onclick="saveData()">Save Data</button>
+  <button onclick="importData()">Import Data</button>
+  <div id="imported-data"></div>
+
+  <script>
+    // open a connection to the IndexedDB database
+    var db;
+    var request = indexedDB.open("myDatabase", 1);
+
+    request.onerror = function(event) {
+      console.log("Database error: " + event.target.errorCode);
+    };
+
+    request.onupgradeneeded = function(event) {
+      // create an object store to store the data
+      var db = event.target.result;
+      var objectStore = db.createObjectStore("myObjectStore", { keyPath: "id" });
+    };
+
+    request.onsuccess = function(event) {
+      db = event.target.result;
+      console.log("Database opened successfully!");
+    };
+
+    function saveData() {
+      // save some data to the IndexedDB database
+      var data = {
+        id: 1,
+        name: "John",
+        age: 30,
+        city: "New York"
+      };
+      var transaction = db.transaction(["myObjectStore"], "readwrite");
+      var objectStore = transaction.objectStore("myObjectStore");
+      var request = objectStore.add(data);
+      request.onsuccess = function(event) {
+        console.log("Data saved!");
+      };
+      transaction.oncomplete = function(event) {
+        console.log("Transaction completed!");
+      };
+    }
+
+    function importData() {
+      // import data from the IndexedDB database
+      var transaction = db.transaction(["myObjectStore"], "readonly");
+      var objectStore = transaction.objectStore("myObjectStore");
+      var request = objectStore.get(1);
+      request.onsuccess = function(event) {
+        var data = event.target.result;
+        if (data) {
+          document.getElementById("imported-data").innerHTML = "Imported data: " + JSON.stringify(data);
+        } else {
+          document.getElementById("imported-data").innerHTML = "No data found!";
+        }
+      };
+      transaction.oncomplete = function(event) {
+        console.log("Transaction completed!");
+      };
+    }
+  </script>
+
+</body>
+</html>
