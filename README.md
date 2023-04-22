@@ -1,0 +1,1 @@
+This is a BASIC unblocked games website layout! its very simple to understand. I give permission for everyone to use this. you can even scrap all the names and call it your website you coded yourself. have fun!
