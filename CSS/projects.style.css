@@ -4,7 +4,7 @@ body {background-color: black;
   width: 275px;
    height:175px;
   position: relative;
-  display: inline-block;
+  display: inline-block !important;
   margin: 20px;
   transform: translateZ(0); 
   transition: transform .2s;
@@ -13,7 +13,7 @@ body {background-color: black;
   border-radius: 55px; 
 }
         .image {
-            display: flex;
+            display: flex !important;
             width: 275px;
             height: 175px;
             object-fit: cover; /* adjust as needed */
