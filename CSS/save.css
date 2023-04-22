@@ -1,4 +1,7 @@
 /* Style for the save button */
+body {background-color: black;
+}
+
 #save-button {
   background-color: #4CAF50;
   color: white;
@@ -6,6 +9,7 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  item-align: center;
 }
 
 /* Style for the import button */
@@ -16,6 +20,7 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  item-align: center;
 }
 
 /* Hide the import input field */
