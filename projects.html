@@ -10,27 +10,36 @@
   <a href="#" onclick="window.location.href='#option3'" style="padding: 20px 30px;">Option 3</a>
   <a href="#" onclick="window.location.href='#option4'" style="padding: 20px 30px; margin-left: 10px;">Option 4</a>
 </div>
-	 <div class="search-bar">
-		<input type="text" placeholder="Click here to search" oninput="searchGames()">
-		<img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png" alt="Search">
-	</div>
-	  <script>const searchInput = document.querySelector('.search-bar input[type="text"]');
-const images = document.querySelectorAll('.image-container');
+	 <div class="search-container">
+  <input type="text" id="game-search-bar" placeholder="Click here to search">
+</div>
 
-searchInput.addEventListener('input', () => {
-  const searchValue = searchInput.value.toLowerCase();
+	  <script>const searchInput = document.getElementById("game-search-bar");
 
-  images.forEach((image) => {
-    const gameName = image.querySelector('.bottom-div').textContent.toLowerCase();
-    
-    if (gameName.includes(searchValue)) {
-      image.classList.remove('hidden');
-    } else {
-      image.classList.add('hidden');
-    }
-  });
+searchInput.addEventListener("click", function() {
+  searchInput.placeholder = "";
+  searchInput.classList.add("clicked");
 });
 
+searchInput.addEventListener("blur", function() {
+  searchInput.placeholder = "Click here to search";
+  searchInput.classList.remove("clicked");
+});
+
+searchInput.addEventListener("input", searchGames);
+
+function searchGames() {
+  const searchInputValue = searchInput.value.toLowerCase();
+  const imageContainers = document.querySelectorAll(".image-container");
+  Array.from(imageContainers).forEach(imageContainer => {
+    const matchingImages = Array.from(imageContainer.querySelectorAll(".image." + searchInputValue)).length;
+    if (matchingImages === 0) {
+      imageContainer.style.display = "none";
+    } else {
+      imageContainer.style.display = "block";
+    }
+  });
+}
 </script>
 </head>
 <body>
