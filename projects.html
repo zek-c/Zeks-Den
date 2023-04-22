@@ -13,33 +13,20 @@
 	  <div class="search-container">
   <input type="text" id="search-bar" placeholder="Click here to search">
 </div>
-	  <script>function searchGames() {
-  // Get the search input and convert it to lowercase
-  let input = document.getElementById("search-input").value.toLowerCase();
+	  <script>const searchBar = document.getElementById('searchBar');
+const images = document.getElementsByClassName('image-container');
 
-  // Get all of the game containers
-  let gameContainers = document.querySelectorAll(".image-container");
-
-  // Loop through each game container
-  gameContainers.forEach(container => {
-    // Get the game title from the bottom div
-    let gameTitle = container.querySelector(".bottom-div").textContent.toLowerCase();
-
-    // Check if the game title contains the search input
-    if (gameTitle.includes(input)) {
-      // Show the game container if it matches the search input
-      container.style.display = "block";
+searchBar.addEventListener('keyup', function() {
+  const searchTerm = searchBar.value.toLowerCase();
+  for (let i = 0; i < images.length; i++) {
+    const gameTitle = images[i].querySelector('.bottom-div').textContent.toLowerCase();
+    if (gameTitle.includes(searchTerm)) {
+      images[i].style.display = 'inline-block';
     } else {
-      // Hide the game container if it does not match the search input
-      container.style.display = "none";
+      images[i].style.display = 'none';
     }
-  });
-}
-
-// Add an event listener to the search input
-let searchInput = document.getElementById("search-input");
-searchInput.addEventListener("keyup", searchGames);
-
+  }
+});
 </script>
 </head>
 <body>
