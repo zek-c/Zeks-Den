@@ -85,7 +85,7 @@ font-family: roboto; monospace;
 }
 
 #game-search-bar:focus {
-  width: 300px;
+  width: 1200px;
 }
 
 #game-search-bar::placeholder {
