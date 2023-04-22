@@ -13,23 +13,21 @@
 	  <div class="search-container">
   <input type="text" id="game-search-bar" placeholder="Click here to search">
 </div>
-	  <script>const searchBar = document.getElementById("search-bar");
-const gameList = document.getElementById("game-list");
+	  <script>const searchBar = document.getElementById('searchBar');
+const images = document.querySelectorAll('.image-container');
 
-searchBar.addEventListener("keyup", function(event) {
-  const searchText = event.target.value.toLowerCase();
-  const games = gameList.getElementsByClassName("image-container");
-  for (let i = 0; i < games.length; i++) {
-    const game = games[i];
-    const bottomDiv = game.querySelector(".bottom-div");
-    if (bottomDiv.textContent.toLowerCase().indexOf(searchText) === -1) {
-      game.style.display = "none";
+searchBar.addEventListener('keyup', function(event) {
+  const input = event.target.value.toLowerCase();
+  
+  for (let i = 0; i < images.length; i++) {
+    const gameName = images[i].querySelector('.bottom-div').textContent.toLowerCase();
+    if (!gameName.includes(input)) {
+      images[i].classList.add('hidden');
     } else {
-      game.style.display = "";
+      images[i].classList.remove('hidden');
     }
   }
 });
-
 </script>
 </head>
 <body>
