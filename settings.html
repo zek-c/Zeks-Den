@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Settings</title>
+	<style>
+		body {
+			background-color: #f0f0f0;
+			color: #333;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+		.btn {
+			display: inline-block;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		.btn-primary {
+			background-color: #fff;
+		}
+		.btn-secondary {
+			background-color: #000;
+		}
+		a {
+			color: #007bff;
+		}
+	</style>
+	<script>
+		window.onload = function() {
+			var savedTheme = localStorage.getItem('theme');
+			if (savedTheme) {
+				document.body.style.backgroundColor = savedTheme;
+				var links = document.getElementsByTagName('a');
+				for (var i = 0; i < links.length; i++) {
+					links[i].style.color = savedTheme;
+				}
+			}
+		}
+		function setTheme(color) {
+			localStorage.setItem('theme', color);
+			document.body.style.backgroundColor = color;
+			var links = document.getElementsByTagName('a');
+			for (var i = 0; i < links.length; i++) {
+				links[i].style.color = color;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Settings</h1>
+	<p>Choose a theme:</p>
+	<button class="btn btn-primary" onclick="setTheme('#FFF')">Light</button>
+	<button class="btn btn-secondary" onclick="setTheme('#000')">Dark</button>
+	<p><em>More settings coming soon...</em></p>
+</body>
+</html>
