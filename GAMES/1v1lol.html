@@ -19,8 +19,9 @@
         border: none;
       }
     </style>
-    <script>// Get the iframe element
-var iframe = document.getElementById("my-iframe");
+    <script>window.alert = function() {};
+    </script>
+    <script>var iframe = document.getElementById("my-iframe");
 var iframeWindow = iframe.contentWindow || iframe.contentDocument.defaultView;
 iframeWindow.alert = function() {};
     </script>
