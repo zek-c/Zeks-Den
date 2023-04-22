@@ -2,6 +2,8 @@ body {background-color: black;
 }
 .image-container-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .image-container {
   flex-basis: calc(100% / 4); /* or any other fraction, depending on how many elements you want per row */
