@@ -28,11 +28,13 @@ searchInput.addEventListener("input", searchGames);
 
 function searchGames() {
   const searchInputValue = searchInput.value.toLowerCase();
-  const bottomDivs = document.querySelectorAll(".bottom-div");
-  const matchingGames = Array.from(bottomDivs).filter(
-    (bottomDiv) => bottomDiv.textContent.toLowerCase().includes(searchInputValue)
-  );
+  const gameElements = document.querySelectorAll(".game");
+  const matchingGames = Array.from(gameElements).filter((gameElement) => {
+    const bottomDiv = gameElement.querySelector(".bottom-div");
+    return bottomDiv && bottomDiv.textContent.toLowerCase().includes(searchInputValue);
+  });
 }
+
 	  </script>
 </head>
 <body>
