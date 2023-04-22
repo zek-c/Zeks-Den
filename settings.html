@@ -38,7 +38,7 @@
 			var savedTheme = localStorage.getItem('theme');
 			if (savedTheme) {
 				document.body.style.backgroundColor = savedTheme;
-				var links = document.getElementsByTagName('a');
+				var links = document.getElementsByTagName('a, div');
 				for (var i = 0; i < links.length; i++) {
 					links[i].style.color = savedTheme;
 				}
@@ -47,7 +47,7 @@
 				var savedTheme = localStorage.getItem('theme');
 				if (savedTheme) {
 					document.body.style.backgroundColor = savedTheme;
-					var links = document.getElementsByTagName('a');
+					var links = document.getElementsByTagName('a, div');
 					for (var i = 0; i < links.length; i++) {
 						links[i].style.color = savedTheme;
 					}
@@ -57,14 +57,14 @@
 		function setTheme(color) {
 			localStorage.setItem('theme', color);
 			document.body.style.backgroundColor = color;
-			var links = document.getElementsByTagName('a');
+			var links = document.getElementsByTagName('a, div');
 			for (var i = 0; i < links.length; i++) {
 				links[i].style.color = color;
 			}
 			if (window.location.href.indexOf("projects") > -1) {
 				localStorage.setItem('theme', color);
 				document.body.style.backgroundColor = color;
-				var links = document.getElementsByTagName('a');
+				var links = document.getElementsByTagName('a, div');
 				for (var i = 0; i < links.length; i++) {
 					links[i].style.color = color;
 				}
