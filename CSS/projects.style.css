@@ -21,8 +21,8 @@ body {background-color: black;
             display: flex;
             width: 275px;
             height: 175px;
-            object-fit: cover; /* adjust as needed */
-            border-radius: 55px; /* for rounded edges */
+            object-fit: cover; 
+            border-radius: 55px; 
             cursor: pointer;
             transition: transform .2s;
             z-index:1
