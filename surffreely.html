@@ -107,6 +107,7 @@ justify-content: center;
 			}
 		}
 	</script>
+        <button>Press "~" to close the iFrames</button>
 	<button onclick="openIframe('https://sheilassunshades.site')">Nebula</button>
 	<button onclick="openIframe('https://bing.com')">Bing</button>
 	<button onclick="openIframe('https://cold-silly-coriander.glitch.me')">Chrome (slow)</button>
@@ -117,6 +118,15 @@ justify-content: center;
 			iframe.src = src;
 			document.body.appendChild(iframe);
 		}
+document.addEventListener('keydown', function(event) {
+  if (event.key === '~') {
+    let iframes = document.querySelectorAll('iframe');
+    for (let i = 0; i < iframes.length; i++) {
+      iframes[i].parentNode.removeChild(iframes[i]);
+    }
+  }
+});
+
 	</script>
 </body>
 </html>
