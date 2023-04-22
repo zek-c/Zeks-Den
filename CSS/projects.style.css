@@ -1,9 +1,9 @@
 body {background-color: black;
 }
 .image-container-wrapper {
-width: 25%;
-  margin-bottom: 20px;
-  box-sizing: border-box; /* include padding and border in the width calculation */
+display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 10px;
 }
 .image-container {
