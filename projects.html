@@ -29,11 +29,16 @@ searchInput.addEventListener("input", searchGames);
 function searchGames() {
   const searchInputValue = searchInput.value.toLowerCase();
   const gameElements = document.querySelectorAll(".game");
-  const matchingGames = Array.from(gameElements).filter((gameElement) => {
+  Array.from(gameElements).forEach((gameElement) => {
     const bottomDiv = gameElement.querySelector(".bottom-div");
-    return bottomDiv && bottomDiv.textContent.toLowerCase().includes(searchInputValue);
+    if (bottomDiv && bottomDiv.textContent.toLowerCase().includes(searchInputValue)) {
+      gameElement.classList.remove("hidden");
+    } else {
+      gameElement.classList.add("hidden");
+    }
   });
 }
+
 
 	  </script>
 </head>
