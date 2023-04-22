@@ -23,7 +23,10 @@
                 x.style.display = "inline-block";
                 document.getElementById("y").style.position = "static"
                 
-            } else {
+            } 
+            function chrome() {
+            document.getElementById("c").innerHTML = "<iframe id=\"iframe\" src=\"https://cold-silly-coriander.glitch.me/"style=\" width=\"100%\" height=\"100%\";>"
+        } else {
                 x.style.display = "none";
                 document.getElementById("y").style.position = "absolute"
                 document.getElementById("y").style.zIndex = "1"
@@ -109,7 +112,7 @@
 </head>
 <button id="y" onclick=fullscreen()>↓</button><!--
 --><div id="header"><!--
-            --><button onclick="bing()">Bing </button><button onclick="nebula()">Nebula</button>
+            --><button onclick="bing()">Bing </button><button onclick="nebula()">Nebula</button><button onclick="chrome()">Chrome (slow)</button>
                 <form onsubmit="goToURL();">
                     <input type="url" >
                 </form>
