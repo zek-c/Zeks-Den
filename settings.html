@@ -10,7 +10,6 @@
 			text-align: center;
 		}
 		h1 {
-			text-align: center;
 			margin-top: 50px;
 			margin-bottom: 30px;
 		}
@@ -24,20 +23,23 @@
 			cursor: pointer;
 		}
 		.btn-primary {
-			background-color: #000;
+			background-color: #007bff;
 		}
 		.btn-secondary {
-			background-color: #000;
+			background-color: #6c757d;
 		}
-		a {
-			color: #007bff;
-		}	
-		div.locbar {
+		.locbar {
+			background-color: #007bff;
+			color: #fff;
+			padding: 10px;
+			margin-bottom: 30px;
 		}
 	</style>
 	<script>
 		window.onload = function() {
 			var savedTheme = localStorage.getItem('theme');
+			if (savedTheme) {
+				document.body.style.backgroundColor = savedTheme;
 				var locbar = document.getElementsByClassName('locbar')[0];
 				if (locbar) {
 					locbar.style.backgroundColor = savedTheme;
@@ -47,10 +49,6 @@
 				var savedTheme = localStorage.getItem('theme');
 				if (savedTheme) {
 					document.body.style.backgroundColor = savedTheme;
-					var links = document.getElementsByTagName('h4');
-					for (var i = 0; i < links.length; i++) {
-						links[i].style.color = savedTheme;
-					}
 					var locbar = document.getElementsByClassName('locbar')[0];
 					if (locbar) {
 						locbar.style.backgroundColor = savedTheme;
@@ -61,10 +59,6 @@
 		function setTheme(color) {
 			localStorage.setItem('theme', color);
 			document.body.style.backgroundColor = color;
-			var links = document.getElementsByTagName('h4');
-			for (var i = 0; i < links.length; i++) {
-				links[i].style.color = color;
-			}
 			var locbar = document.getElementsByClassName('locbar')[0];
 			if (locbar) {
 				locbar.style.backgroundColor = color;
@@ -72,10 +66,6 @@
 			if (window.location.href.indexOf("projects.html") > -1) {
 				localStorage.setItem('theme', color);
 				document.body.style.backgroundColor = color;
-				var links = document.getElementsByTagName('h4');
-				for (var i = 0; i < links.length; i++) {
-					links[i].style.color = color;
-				}
 				var locbar = document.getElementsByClassName('locbar')[0];
 				if (locbar) {
 					locbar.style.backgroundColor = color;
@@ -87,8 +77,9 @@
 <body>
 	<h1>Settings</h1>
 	<p>Choose a theme:</p>
-	<button class="btn btn-primary" onclick="setTheme('#000')">Dark</button>
-	<button class="btn btn-secondary" onclick="setTheme('#fff')">Light</button>
+	<button class="btn btn-primary" onclick="setTheme('#fff')">White</button>
+	<button class="btn btn-secondary" onclick="setTheme('#000')">Black</button>
 	<p><em>More settings coming soon...</em></p>
+
 </body>
 </html>
