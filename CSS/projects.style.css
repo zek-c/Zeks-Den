@@ -91,4 +91,8 @@ font-family: roboto; monospace;
 #game-search-bar::placeholder {
   color: #fff;
 }
+.game.hidden {
+  display: none !important;
+}
+
 
