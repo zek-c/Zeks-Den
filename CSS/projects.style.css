@@ -1,13 +1,14 @@
 body {background-color: black;
 }
 .image-grid {
- .image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
   margin: 0 auto;
-  max-width: 100%;
-  overflow: auto; /* or overflow: hidden; */
+  overflow: hidden;
+  max-height: 80vh;
 }
 }
 .image-container {
