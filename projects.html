@@ -12,7 +12,44 @@
 </div>
 </head>
 <body>
-  
+  <script>
+		window.onload = function() {
+			var savedTheme = localStorage.getItem('theme');
+			if (savedTheme) {
+				document.body.style.backgroundColor = savedTheme;
+				var links = document.getElementsByTagName('a');
+				for (var i = 0; i < links.length; i++) {
+					links[i].style.color = savedTheme;
+				}
+			}
+			if (window.location.href.indexOf("projects") > -1) {
+				var savedTheme = localStorage.getItem('theme');
+				if (savedTheme) {
+					document.body.style.backgroundColor = savedTheme;
+					var links = document.getElementsByTagName('a');
+					for (var i = 0; i < links.length; i++) {
+						links[i].style.color = savedTheme;
+					}
+				}
+			}
+		}
+		function setTheme(color) {
+			localStorage.setItem('theme', color);
+			document.body.style.backgroundColor = color;
+			var links = document.getElementsByTagName('a');
+			for (var i = 0; i < links.length; i++) {
+				links[i].style.color = color;
+			}
+			if (window.location.href.indexOf("projects") > -1) {
+				localStorage.setItem('theme', color);
+				document.body.style.backgroundColor = color;
+				var links = document.getElementsByTagName('a');
+				for (var i = 0; i < links.length; i++) {
+					links[i].style.color = color;
+				}
+			}
+		}
+	</script>
     <div class="image-container">
         <img src="/IMG/slope.png" alt="Failed To Load" class="image" onclick=window.location.href="/games/slope.html">
         <div class="bottom-div">SLOPE</div>
