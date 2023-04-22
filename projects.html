@@ -30,17 +30,15 @@ function searchGames() {
   const searchInputValue = searchInput.value.toLowerCase();
   const gameElements = document.querySelectorAll(".game");
   Array.from(gameElements).forEach((gameElement) => {
-    const bottomDiv = gameElement.querySelector(".bottom-div");
-    if (bottomDiv && bottomDiv.textContent.toLowerCase().includes(searchInputValue)) {
+    const gameImage = gameElement.querySelector("img.target-class");
+    if (gameImage && gameImage.alt.toLowerCase().includes(searchInputValue)) {
       gameElement.classList.remove("hidden");
     } else {
       gameElement.classList.add("hidden");
     }
   });
 }
-
-
-	  </script>
+</script>
 </head>
 <body>
   <script>
