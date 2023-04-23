@@ -36,7 +36,9 @@
 .record .spin {
   animation: spin 1s linear infinite;
 }
-
+h1 {
+font-family: roboto; monospace;
+}
 @keyframes spin {
   100% {
     transform: rotate(360deg);
