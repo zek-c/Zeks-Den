@@ -15,8 +15,14 @@ sounds.forEach((sound, index) => {
   img.src = '/IMG/IMG_0912.png'; // replace with actual image source
   img.alt = sound.name;
   img.addEventListener('click', () => {
-    playSound(index);
-    img.classList.add('spin');
+    if (img.classList.contains('spin')) {
+      // if already spinning, stop and reset audio
+      stopSound(audio);
+    } else {
+      // otherwise, start spinning and play audio
+      playSound(index);
+      img.classList.add('spin');
+    }
   });
   record.appendChild(img);
   const caption = document.createElement('div');
@@ -26,17 +32,21 @@ sounds.forEach((sound, index) => {
   recordContainer.appendChild(record);
 });
 
+// play sound and stop spinning on click
+let audio;
 function playSound(index) {
-  const audio = new Audio(sounds[index].src);
+  audio = new Audio(sounds[index].src);
   audio.play();
   audio.addEventListener('ended', () => {
-    const currentRecord = recordContainer.children[index].children[0];
-    currentRecord.classList.remove('spin');
-  });
-  recordContainer.children[index].children[0].addEventListener('click', () => {
-    audio.pause();
-    audio.currentTime = 0;
-    const currentRecord = recordContainer.children[index].children[0];
-    currentRecord.classList.remove('spin');
+    stopSound(audio);
   });
 }
+
+// stop sound and spinning on click
+function stopSound(audio) {
+  audio.pause();
+  audio.currentTime = 0;
+  const currentRecord = audio.parentElement;
+  currentRecord.children[0].classList.remove('spin');
+}
+
