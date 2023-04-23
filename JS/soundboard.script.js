@@ -1,12 +1,15 @@
 const sounds = [
-  {name: 'Sound 1', src: 'sound1.mp3'},
-  {name: 'Sound 2', src: 'sound2.mp3'},
-  {name: 'Sound 3', src: 'sound3.mp3'},
-  {name: 'Sound 1', src: 'sound1.mp3'},
-  {name: 'Sound 2', src: 'sound2.mp3'},
-  {name: 'Sound 3', src: 'sound3.mp3'},
-  {name: 'Sound 2', src: 'sound2.mp3'},
-  {name: 'Sound 3', src: 'sound3.mp3'},
+  {name: 'Bowser Peaches Song', src: 'sound1.mp3'},
+  {name: 'I put the new forgis', src: 'sound2.mp3'},
+  {name: 'Evil Goku', src: 'sound3.mp3'},
+  {name: 'Treat Me Like White Tees', src: 'sound1.mp3'},
+  {name: 'HL2 trumpets', src: 'sound2.mp3'},
+  {name: 'i have plans', src: 'sound3.mp3'},
+  {name: 'eh eh eh', src: 'sound2.mp3'},
+  {name: 'wenomechainasama', src: 'sound3.mp3'},
+  {name: 'saul goodman', src: 'sound2.mp3'},
+  {name: '1 2 buckle my shoeeee', src: 'sound3.mp3'},
+  {name: 'Kitchen Nightmares Violin', src: 'sound2.mp3'},
   // add more sounds here...
 ];
 
