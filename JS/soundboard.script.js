@@ -5,6 +5,8 @@ const sounds = [
   {name: 'Sound 1', src: 'sound1.mp3'},
   {name: 'Sound 2', src: 'sound2.mp3'},
   {name: 'Sound 3', src: 'sound3.mp3'},
+  {name: 'Sound 2', src: 'sound2.mp3'},
+  {name: 'Sound 3', src: 'sound3.mp3'},
   // add more sounds here...
 ];
 
