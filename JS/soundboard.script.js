@@ -2,6 +2,9 @@ const sounds = [
   {name: 'Sound 1', src: 'sound1.mp3'},
   {name: 'Sound 2', src: 'sound2.mp3'},
   {name: 'Sound 3', src: 'sound3.mp3'},
+  {name: 'Sound 1', src: 'sound1.mp3'},
+  {name: 'Sound 2', src: 'sound2.mp3'},
+  {name: 'Sound 3', src: 'sound3.mp3'},
   // add more sounds here...
 ];
 
@@ -12,7 +15,7 @@ sounds.forEach((sound, index) => {
   const record = document.createElement('div');
   record.classList.add('record');
   const img = document.createElement('img');
-  img.src = '/IMG/IMG_0912'; // replace with actual image source
+  img.src = '/IMG/IMG_0912.png'; // replace with actual image source
   img.alt = sound.name;
   let isSpinning = false; // track spinning state
   let audio = new Audio(sound.src);
