@@ -12,15 +12,25 @@ sounds.forEach((sound, index) => {
   const record = document.createElement('div');
   record.classList.add('record');
   const img = document.createElement('img');
-  img.src = '/IMG/IMG_0912.png'; // replace with actual image source
+  img.src = '/IMG/IMG_0912'; // replace with actual image source
   img.alt = sound.name;
+  let isSpinning = false; // track spinning state
+  let audio = new Audio(sound.src);
+  audio.addEventListener('ended', () => {
+    isSpinning = false; // stop spinning when audio ends
+    img.classList.remove('spin');
+  });
   img.addEventListener('click', () => {
-    if (img.classList.contains('spin')) {
+    if (isSpinning) {
       // if already spinning, stop and reset audio
-      stopSound(audio);
+      audio.pause();
+      audio.currentTime = 0;
+      isSpinning = false;
+      img.classList.remove('spin');
     } else {
       // otherwise, start spinning and play audio
-      playSound(index);
+      audio.play();
+      isSpinning = true;
       img.classList.add('spin');
     }
   });
@@ -31,22 +41,4 @@ sounds.forEach((sound, index) => {
   record.appendChild(caption);
   recordContainer.appendChild(record);
 });
-
-// play sound and stop spinning on click
-let audio;
-function playSound(index) {
-  audio = new Audio(sounds[index].src);
-  audio.play();
-  audio.addEventListener('ended', () => {
-    stopSound(audio);
-  });
-}
-
-// stop sound and spinning on click
-function stopSound(audio) {
-  audio.pause();
-  audio.currentTime = 0;
-  const currentRecord = audio.parentElement;
-  currentRecord.children[0].classList.remove('spin');
-}
 
