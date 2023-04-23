@@ -1,15 +1,15 @@
 const sounds = [
-  {name: 'Bowser Peaches Song', src: 'sound1.mp3'},
-  {name: 'I put the new forgis', src: 'sound2.mp3'},
-  {name: 'Evil Goku', src: 'sound3.mp3'},
-  {name: 'Treat Me Like White Tees', src: 'sound1.mp3'},
-  {name: 'HL2 trumpets', src: 'sound2.mp3'},
-  {name: 'i have plans', src: 'sound3.mp3'},
-  {name: 'eh eh eh', src: 'sound2.mp3'},
-  {name: 'wenomechainasama', src: 'sound3.mp3'},
-  {name: 'saul goodman', src: 'sound2.mp3'},
-  {name: '1 2 buckle my shoeeee', src: 'sound3.mp3'},
-  {name: 'Kitchen Nightmares Violin', src: 'sound2.mp3'},
+  {name: 'Bowser Peaches Song', src: '/SOUNDS/peaches.mp3'},
+  {name: 'I put the new forgis', src: '/SOUNDS/forgis.mp3'},
+  {name: 'Evil Goku', src: '/SOUNDS/prowler.mp3'},
+  {name: 'Treat Me Like White Tees', src: '/SOUNDS/whitetees.mp3'},
+  {name: 'HL2 trumpets', src: '/SOUNDS/trumpets.mp3'},
+  {name: 'i have plans', src: '/SOUNDS/plans.mp3'},
+  {name: 'eh eh eh', src: '/SOUNDS/eh.mp3'},
+  {name: 'wenomechainasama', src: '/SOUNDS/weno.mp3'},
+  {name: 'saul goodman', src: '/SOUNDS/saul.mp3'},
+  {name: '1 2 buckle my shoeeee', src: '/SOUNDS/show.mp3'},
+  {name: 'Kitchen Nightmares Violin', src: '/SOUNDS/violin.mp3'},
   // add more sounds here...
 ];
 
