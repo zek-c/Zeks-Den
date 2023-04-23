@@ -1,33 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Make Sure its Closed</title>
+	<title>Make Sure Its Closed</title>
+	<style>
+		iframe {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+	</style>
 </head>
 <body>
-	<iframe id="gameFrame" src="https://kdata1.com/2019/04/MSIC-WEBGL/"></iframe>
-	
-	<script>
-		
-		var iframe = document.getElementById("gameFrame");
-		
-	
-		iframe.onload = function() {
-			
-			var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-			
-			
-			var gameContainer = iframeDoc.getElementsByClassName("gameContainer")[0];
-			var canvas = iframeDoc.getElementById("#canvas");
-			
-		
-			gameContainer.style.position = "fixed";
-			gameContainer.style.top = "0";
-			gameContainer.style.left = "0";
-			gameContainer.style.width = "100%";
-			gameContainer.style.height = "100%";
-			canvas.style.width = "100%";
-			canvas.style.height = "100%";
-		}
-	</script>
+	<iframe src="https://kdata1.com/2019/04/MSIC-WEBGL/"></iframe>
 </body>
 </html>
