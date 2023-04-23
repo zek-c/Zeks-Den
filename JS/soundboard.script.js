@@ -8,7 +8,7 @@ const sounds = [
   {name: 'eh eh eh', src: '/SOUNDS/eh.mp3'},
   {name: 'wenomechainasama', src: '/SOUNDS/weno.mp3'},
   {name: 'saul goodman', src: '/SOUNDS/saul.mp3'},
-  {name: '1 2 buckle my shoeeee', src: '/SOUNDS/show.mp3'},
+  {name: '1 2 buckle my shoeeee', src: '/SOUNDS/shoe.mp3'},
   {name: 'Kitchen Nightmares Violin', src: '/SOUNDS/violin.mp3'},
   // add more sounds here...
 ];
