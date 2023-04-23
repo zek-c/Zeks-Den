@@ -12,7 +12,7 @@ sounds.forEach((sound, index) => {
   const record = document.createElement('div');
   record.classList.add('record');
   const img = document.createElement('img');
-  img.src = 'vinyl.png'; // replace with actual image source
+  img.src = '/IMG/IMG_0912.png'; // replace with actual image source
   img.alt = sound.name;
   img.addEventListener('click', () => {
     playSound(index);
@@ -26,7 +26,6 @@ sounds.forEach((sound, index) => {
   recordContainer.appendChild(record);
 });
 
-// play sound and stop spinning on click
 function playSound(index) {
   const audio = new Audio(sounds[index].src);
   audio.play();
