@@ -12,6 +12,8 @@ const sounds = [
   {name: 'Kitchen Nightmares Violin', src: '/SOUNDS/violin.mp3'},
   {name: 'Ze BlueToof Device', src: '/SOUNDS/bluetoof.mp3'},
   {name: 'Hood Irony', src: '/SOUNDS/hoodirony.mp3'},
+  {name: 'Coca Cola espuma', src: '/SOUNDS/cola.mp3'},
+  {name: 'You got me jumpin like', src: '/SOUNDS/jumping.mp3'},
   // add more sounds here...
 ];
 
