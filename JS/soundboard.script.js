@@ -15,6 +15,7 @@ const sounds = [
   {name: 'Coca Cola espuma', src: '/SOUNDS/cola.mp3'},
   {name: 'You got me jumpin like', src: '/SOUNDS/jumping.mp3'},
   {name: 'SBAC dododododododoo', src: '/SOUNDS/sbac.mp3'},
+  {name: 'Coral Chorus ahhhhhhhh', src: '/SOUNDS/coral.mp3'},
   // add more sounds here...
 ];
 
