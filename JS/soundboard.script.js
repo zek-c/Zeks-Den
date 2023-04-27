@@ -16,6 +16,11 @@ const sounds = [
   {name: 'You got me jumpin like', src: '/SOUNDS/jumping.mp3'},
   {name: 'SBAC dododododododoo', src: '/SOUNDS/sbac.mp3'},
   {name: 'Coral Chorus ahhhhhhhh', src: '/SOUNDS/coral.mp3'},
+  {name: 'TURN DOWN FOR WHAT (joke)', src: '/SOUNDS/down.mp3'},
+  {name: 'mason troy adams', src: '/SOUNDS/mason.mp3'},
+  {name: 'patrick', src: '/SOUNDS/patrick.mp3'},
+  {name: 'Blaring siren (LOUD)', src: '/SOUNDS/siren.mp3'},
+  {name: 'skedaddle', src: '/SOUNDS/skedaddle.mp3'},
   // add more sounds here...
 ];
 
