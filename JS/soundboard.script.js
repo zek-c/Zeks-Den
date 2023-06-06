@@ -23,6 +23,7 @@ const sounds = [
   {name: 'skedaddle', src: '/SOUNDS/skedaddle.mp3'},
   {name: 'vine boom', src: '/SOUNDS/vine.mp3'},
   {name: 'DUN DUN', src: '/SOUNDS/dun.mp3'},
+  {name: 'Andrew Tate Theme', src: '/SOUNDS/tate.mp3'},
   // add more sounds here...
 ];
 
